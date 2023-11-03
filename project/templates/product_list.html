@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Beautiful List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .list-container {
+            background: #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin: 0 0 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 0;
+            font-size: 18px;
+            color: #555;
+            border-bottom: 1px solid #ccc;
+        }
+
+        li:last-child {
+            border: none;
+        }
+
+        .list-header {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 4px 4px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Product List</h1> -->
+    <div class="list-container">
+        <ul>
+            {% for p in p_list %}
+            <li>
+                product name : {{ p.title }} <br>
+                product description : {{ p.description }} <br>
+                product discount : {{ p.discount }} <br>
+                product brand : {{ p.brand }} <br>
+                product category : {{ p.category }} <br>
+                product rating : {{ p.rating }}
+            </li>
+            <span>Price: {{ p.price }}</span>
+            <a href="{% url 'add_to_cart' %}">Add to Cart</a>
+            {% endfor %}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <ul>
+        {% for p in p_list %}
+            <li><p>product name : {{ p.title }} </p>
+                <p>product description : {{ p.description }} </p>
+                <p>product discount : {{ p.discount }}  </p>
+                <p>product brand : {{ p.brand }}  </p>
+                <p>product category : {{ p.category }}  </p>
+                <p>product rating : {{ p.rating }}    </p>
+            </li>
+            <span>Price: {{ p.price }}</span>
+            <a href="{% url 'add_to_cart' %}">Add to Cart</a>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->

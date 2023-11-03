@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 36px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .btn-container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .btn-login {
+            background: #28a745;
+        }
+    </style>
+
+</head>
+<body>
+    <body>
+        <div class="container">
+            <h1>Welcome to Our Home Page</h1>
+            <p>Please log in or sign up to access our services.</p>
+            <div class="btn-container">
+                <a href="{% url 'login_view' %}" class="btn btn-login">Login</a>
+                <a href="{% url 'registration_view' %}" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </body>
+</body>
+</html>
